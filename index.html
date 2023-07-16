@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="list"></h1>
+    <div id="list"></div>
     <script>
         fetch('https://api-php3.vercel.app/api/api.php')
             .then((res) => {
@@ -15,7 +15,6 @@
             .then((data) => {
                 let list = document.getElementById('list');
                 data.forEach((item) => {
-
                     let paragraph = document.createElement('p');
                     let img = document.createElement('img');
                     img.src = item.url_imagem;
