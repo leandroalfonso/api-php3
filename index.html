@@ -21,6 +21,7 @@
                     img.src = item.url_imagem;
                     paragraph.textContent = item.nome;
                     list.appendChild(paragraph);
+                    list.appendChild(img);
                 });
             })
             .catch((error) => {
