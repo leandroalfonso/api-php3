@@ -15,7 +15,10 @@
             .then((data) => {
                 let list = document.getElementById('list');
                 data.forEach((item) => {
+
                     let paragraph = document.createElement('p');
+                    let img = document.createElement('img');
+                    img.src = item.url_imagem;
                     paragraph.textContent = item.nome;
                     list.appendChild(paragraph);
                 });
