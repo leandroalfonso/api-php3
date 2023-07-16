@@ -13,7 +13,12 @@
                 return res.json();
             })
             .then((data) => {
-                document.getElementById('list').innerHTML = `<p>${data.nome}</p>`;
+                let list = document.getElementById('list');
+                data.forEach((item) => {
+                    let paragraph = document.createElement('p');
+                    paragraph.textContent = item.nome;
+                    list.appendChild(paragraph);
+                });
             })
             .catch((error) => {
                 console.log(error);

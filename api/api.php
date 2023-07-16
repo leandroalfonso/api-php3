@@ -31,8 +31,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $dados[] = array(
             "nome" => $row["nome"],
-            "imagem" => $row["url_imagem"],
-            
+            "imagem" => $row["url_imagem"]
         );
     }
 
